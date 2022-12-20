@@ -9,19 +9,27 @@ mod lang_items;
 
 use core::arch::global_asm;
 
-use sbi::console_putchar;
 global_asm!(include_str!("entry.asm"));
+
+
+
+fn main() {
+    
+}
+
+
 // fn main() {
 //     // println!("Hello, world!");
 // }
 
 
-#[no_mangle]
-pub fn rust_main() -> ! {
-    clear_bss();
-    console_putchar(44);
-    panic!("Shutdown machine!");
-}
+// #[no_mangle]
+// pub fn rust_main() -> ! {
+//     clear_bss();
+//     console_putchar(44);
+//     panic!("Shutdown machine!");
+// }
+
 
 
 // #[no_mangle]
